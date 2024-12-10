@@ -1,3 +1,98 @@
+/* Đặt nền mờ cho toàn màn hình */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: center;
+  z-index: 1000;
+  animation: popupBounce 0.8s ease-out; /* Hiệu ứng bật */
+}
+
+/* Hiệu ứng bounce cho popup */
+@keyframes popupBounce {
+  0% {
+    transform: translate(-50%, -60%) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+#popup h2 {
+  color: #ff6347; /* Màu nổi bật */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ff6347, 0 0 20px #ff4500;
+}
+
+#popup p {
+  color: #333;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+#popup img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  animation: rotateImage 3s infinite linear; /* Hiệu ứng xoay */
+}
+
+/* Hiệu ứng xoay cho ảnh */
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#popup button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#popup button:hover {
+  background-color: #45a049;
+  transform: scale(1.1); /* Phóng to khi hover */
+}
+
+#popup button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiệu ứng nền tối */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
 @font-face {
     font-family: "a";
     src: url();
