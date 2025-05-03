@@ -1,0 +1,4 @@
+from Tran_Hung_Tai import download_video
+tiktok_url = input("Nhập số video bạn muốn tải: ")
+
+download_video(tiktok_url, save_path="video1.mp4")
